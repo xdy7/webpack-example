@@ -1,0 +1,29 @@
+/* 头部 */
+.header {
+    display: flex;
+}
+
+.xdy-logo {
+    height: 56px;
+}
+
+.xdy-logo img {
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    border-bottom: 1px solid #000;
+}
+
+.navbar li a {
+    height: 100%;
+    color: #333;
+    padding: 0 15px;
+}
+
+/* 底部 */
