@@ -9,14 +9,14 @@ module.exports = {
         path: path.join(__dirname, 'dist')
     },
 
-    // module: {
-    //     rules: [{
-    //         test: /\.html$/,
-    //         loader: 'underscore-template-loader'
-    //     }]
-    //     // 局部加载 html，应该不会用到
-    //     // 自定义模板文件
-    // },
+    module: {
+        rules: [{
+            // test: /\.html$/,
+            // loader: 'html-loader'
+        }]
+        // 局部加载 html、自定义模板文件
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -29,5 +29,13 @@ module.exports = {
             filename: 'static/about.html',
             template: 'src/page/about.html'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'static/header.html',
+            template: 'src/template/header.html'
+        }),
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'header',
+        //     filename: 'src/template/header.html'
+        // })
     ]
 }
